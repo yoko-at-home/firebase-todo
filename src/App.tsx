@@ -9,13 +9,20 @@ import TaskItem from "./TaskItem";
 
 
 const useStyles = makeStyles({
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
   field: {
     marginTop: 30,
     marginBottom: 20,
+    // margin: 80,
+    color: 'rgb(85, 14, 24)!important',
   },
   list: {
-    margin: "auto",
-    width: "40%",
+    margin: 'auto',
+    width: '100%',
   },
 });
 
@@ -60,22 +67,28 @@ const App: React.FC = (props:any) => {
         <ExitToAppIcon />
       </button>
       <br />
-      <FormControl>
-        <TextField
-          className={classes.field}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          label='次のタスクは?'
-          value={input}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setInput(e.target.value)
-          }
-        />
-      </FormControl>
-      <button className={styles.app__icon} disabled={!input} onClick={newTask}>
-        <AddToPhotosIcon />
-      </button>
+      <div className={classes.wrapper}>
+        <FormControl>
+          <TextField
+            className={classes.field}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            label='次のタスクは?'
+            value={input}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setInput(e.target.value)
+            }
+          />
+        </FormControl>
+        <button
+          className={styles.app__icon}
+          disabled={!input}
+          onClick={newTask}
+        >
+          <AddToPhotosIcon />
+        </button>
+      </div>
       <List className={classes.list}>
         {tasks.map((task) => (
           <TaskItem key={task.id} id={task.id} title={task.title} />
