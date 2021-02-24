@@ -1,8 +1,8 @@
 .app__root{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: radial-gradient(circle, rgba(251,251,187,10) 30%, rgb(85, 14, 30) 90%);
+  justify-content: flex-start;
+  /* background: radial-gradient(circle, rgba(251,251,187,10) 30%, rgb(85, 14, 30) 90%); */
   text-align: center;
   color:rgb(85, 14, 24);
   text-shadow: 3px 2px 3px rgba(255,255,255,.8);
