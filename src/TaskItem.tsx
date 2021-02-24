@@ -19,7 +19,7 @@ const TaskItem: React.FC<PROPS> = (props) => {
   };
   return (
     <ListItem>
-      <h2>{props.title}</h2>
+      <h3>{props.title}</h3>
       <Grid container justify='flex-end'>
         <TextField
           InputLabelProps={{

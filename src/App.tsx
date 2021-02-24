@@ -44,18 +44,20 @@ const App: React.FC = (props:any) => {
     setInput("");
   };
   return (
-    <div className={ styles.app__root }>
+    <div className={styles.app__root}>
       <h1>Todo App by React/Firebase</h1>
-      <button className={styles.app__logout}
+      <button
+        className={styles.app__logout}
         onClick={async () => {
           try {
             await auth.signOut();
             props.history.push('login');
-          } catch(error) {
+          } catch (error) {
             alert(error.message);
-        }
-      }}>
-<ExitToAppIcon/>
+          }
+        }}
+      >
+        <ExitToAppIcon />
       </button>
       <br />
       <FormControl>
@@ -64,7 +66,7 @@ const App: React.FC = (props:any) => {
           InputLabelProps={{
             shrink: true,
           }}
-          label='New task?'
+          label='次のタスクは?'
           value={input}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setInput(e.target.value)

@@ -1,7 +1,11 @@
 .app__root{
+  background-color: dodgerblue;
+  background: radial-gradient(circle, rgba(251,251,187,1) 20%, rgb(85, 14, 24) 80%);
   text-align: center;
-  color:dimgray;
+  color:rgb(85, 14, 24);
+  text-shadow: 3px 2px 3px rgba(255,255,255,.8);
   font-family: serif;
+  height: 100vh;
 }
 .app__icon {
   cursor: pointer;
@@ -25,4 +29,8 @@ button:disabled {
 }
 h1 {
 display: inline-block;
+}
+h3 {
+display: inline-block;
+width: 50%;
 }
